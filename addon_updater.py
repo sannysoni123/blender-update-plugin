@@ -931,7 +931,7 @@ class Singleton_updater(object):
 			self._subfolder_path.replace('\\', os.path.sep)
 
 		# either directly in root of zip/one subfolder, or use specified path
-		if os.path.isfile(os.path.join(unpath,"__init__.py")) == False:
+		if os.path.isfile(os.path.join(unpath,"swivel_export.py")) == False:
 			dirlist = os.listdir(unpath)
 			if len(dirlist)>0:
 				if self._subfolder_path == "" or self._subfolder_path == None:
@@ -941,7 +941,7 @@ class Singleton_updater(object):
 
 			# smarter check for additional sub folders for a single folder
 			# containing __init__.py
-			if os.path.isfile(os.path.join(unpath,"__init__.py")) == False:
+			if os.path.isfile(os.path.join(unpath,"swivel_export.py")) == False:
 				if self._verbose:
 					print("not a valid addon found")
 					print("Paths:")

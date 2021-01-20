@@ -21,14 +21,14 @@ icons_dir = os.path.join(os.path.dirname(__file__), "icons")
 
 bl_info = {
     "name": "Swivel Exporter",
-    "author": "sannysoni123",
+    "author": "Swivel",
     "version": (1, 0),
     "blender": (2, 80, 0),
     "location": "File > Export > Swivel",
     "description": "Swivel Exporter custom",
     "warning": "",
-    "wiki_url": "https://github.com/sannysoni123/blender-update-plugin",
-    "tracker_url": "https://github.com/sannysoni123/blender-update-plugin/issues",
+    "wiki_url": "",
+    "tracker_url": "",
     "category": "Import-Export"
 }
 
@@ -425,7 +425,7 @@ def register():
     ## Use following custom icon path while run script locally
     # script_path = bpy.context.space_data.text.filepath
     # icons_dir = os.path.join(os.path.dirname(script_path), "icons")
-    custom_icons.load("custom_icon", os.path.join(icons_dir, "bg-2.jpg"), 'IMAGE')
+    custom_icons.load("custom_icon", os.path.join(icons_dir, "swivel-icon.png"), 'IMAGE')
 
 
 def unregister():
