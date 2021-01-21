@@ -1297,8 +1297,7 @@ def select_link_function(self, tag):
 	return link
 
 def get_current_version(self, tag):
-    version = updater.json["version_text"]["version"]
-	ver_tuple = updater.version_tuple_from_text(version)
+	ver_tuple = updater.version_tuple_from_text(updater.update_version)
     return ver_tuple
 # -----------------------------------------------------------------------------
 # Register, should be run in the register module itself
