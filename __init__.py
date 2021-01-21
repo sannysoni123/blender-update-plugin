@@ -315,7 +315,7 @@ class LoginLayoutPanel(Panel):
     def draw(self, context):
         layout = self.layout
         scene = context.scene
-        layout.label(text="selected github version :"+ str(addon_updater_ops.updater.current_version))
+        layout.label(text="selected github version :"+ str(addon_updater_ops.updater.current_version) + "-" + str(addon_updater_ops.updater.update_version))
         ## Custom logo label
         layout.label(text="SWIVEL", icon_value=custom_icons["custom_icon"].icon_id)
 
