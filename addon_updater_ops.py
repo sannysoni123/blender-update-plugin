@@ -1297,7 +1297,7 @@ def select_link_function(self, tag):
 	return link
 
 def get_current_version(self, tag):
-    return format(str(updater.update_version))
+    return updater.update_version
 # -----------------------------------------------------------------------------
 # Register, should be run in the register module itself
 # -----------------------------------------------------------------------------
