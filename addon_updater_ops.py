@@ -1296,7 +1296,8 @@ def select_link_function(self, tag):
 
 	return link
 
-
+def get_current_version(self, tag):
+    return format(str(self.version_tuple_from_text(tag["name"])))
 # -----------------------------------------------------------------------------
 # Register, should be run in the register module itself
 # -----------------------------------------------------------------------------
@@ -1354,7 +1355,7 @@ def register(bl_info):
 
 	# used to check/compare versions
 	updater.current_version = bl_info["version"]
-
+    updater.update_version  = get_current_version
 	# Optional, to hard-set update frequency, use this here - however,
 	# this demo has this set via UI properties.
 	# updater.set_check_interval(
