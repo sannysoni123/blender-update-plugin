@@ -315,7 +315,7 @@ class LoginLayoutPanel(Panel):
     def draw(self, context):
         layout = self.layout
         scene = context.scene
-
+        layout.label(text="selected github version :"+ addon_updater_ops.updater.current_version)
         ## Custom logo label
         layout.label(text="SWIVEL", icon_value=custom_icons["custom_icon"].icon_id)
 
@@ -365,7 +365,7 @@ class DemoPreferences(bpy.types.AddonPreferences):
     auto_check_update = bpy.props.BoolProperty(
         name = "Auto-check for Update",
         description = "If enabled, auto-check for updates using an interval",
-        default = False,
+        default = True,
     )
 
     updater_intrval_months = bpy.props.IntProperty(
@@ -377,7 +377,7 @@ class DemoPreferences(bpy.types.AddonPreferences):
     updater_intrval_days = bpy.props.IntProperty(
         name='Days',
         description = "Number of days between checking for updates",
-        default=7,
+        default=1,
         min=0,
     )
     updater_intrval_hours = bpy.props.IntProperty(
