@@ -1297,7 +1297,7 @@ def select_link_function(self, tag):
 	return link
 
 def get_current_version(self, tag):
-    return format(str(self.version_tuple_from_text(tag["name"])))
+    return str(tag["name"])
 # -----------------------------------------------------------------------------
 # Register, should be run in the register module itself
 # -----------------------------------------------------------------------------
