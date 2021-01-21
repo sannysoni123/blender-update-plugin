@@ -1355,7 +1355,7 @@ def register(bl_info):
 
 	# used to check/compare versions
 	updater.current_version = bl_info["version"]
-    updater.update_version  = get_current_version
+    updater.update_version_name  = get_current_version
 	# Optional, to hard-set update frequency, use this here - however,
 	# this demo has this set via UI properties.
 	# updater.set_check_interval(
